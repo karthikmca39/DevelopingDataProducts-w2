@@ -1,0 +1,36 @@
+---
+title: "Developing Data Products -  Leaflet"
+author: "KARTHIK Theivendran"
+date: "22 July 2018"
+output: html_document
+---
+
+Developing Data Products-Leaflet - Assignment
+
+My First Map
+
+Create a map that shows the Meenakshi Temple in Madurai Tamilnadu India.
+
+To do that, let’s first load the library Leaflet.
+
+```{r}
+library(leaflet)
+```
+
+Create the map
+
+```{r}
+my_map <- leaflet() %>%
+addTiles()
+my_map
+```
+
+Create a link to the office site of  Meenakshi Temple in Madurai India , which we could get relevant information.
+
+```{r}
+temple <- c("<a href= 'http://maduraimeenakshitemple.com/' >Meenakshi Temple</a>")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lat=9.9195098, lng=78.1171531, popup = temple)
+```
+
